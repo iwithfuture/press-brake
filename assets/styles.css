@@ -695,10 +695,6 @@ p { color: var(--muted); }
   font-size: 13px;
   line-height: 1.42;
 }
-.catalog-proof-image {
-  border-top: 1px solid var(--line);
-  border-bottom: 0 !important;
-}
 .catalog-feature-card .check-list {
   margin-bottom: 0;
 }
