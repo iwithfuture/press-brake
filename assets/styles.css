@@ -641,13 +641,18 @@ p { color: var(--muted); }
 }
 .control-crowning-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 22px;
 }
 .catalog-feature-card {
   border: 1px solid var(--line);
   border-top: 4px solid var(--red);
   background: #fff;
+}
+.catalog-feature-card.crowning-card {
+  display: grid;
+  grid-template-columns: minmax(320px, .95fr) minmax(0, 1.05fr);
+  align-items: center;
 }
 .catalog-feature-card img {
   width: 100%;
@@ -671,7 +676,7 @@ p { color: var(--muted); }
 }
 .controller-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin: 18px 0 14px;
   padding: 0;
@@ -770,7 +775,8 @@ p { color: var(--muted); }
   .metrics { grid-template-columns: repeat(2,1fr); }
   .metrics div:nth-child(3) { border-left: 0; }
   .metrics div:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid,.control-crowning-grid { grid-template-columns: 1fr 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid { grid-template-columns: 1fr 1fr; }
+  .catalog-feature-card.crowning-card { grid-template-columns: 1fr; }
   .solution-card,.application-detail { grid-template-columns: 1fr; }
   .press-type-card { grid-template-columns: 1fr; }
   .solution-card img { height: 220px; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -791,7 +797,7 @@ p { color: var(--muted); }
   .application-hero h1 { font-size: 34px; }
   .press-campaign-hero h1 { font-size: 34px; }
   .application-hero img { min-height: 230px; }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.control-crowning-grid,.controller-list { grid-template-columns: 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.controller-list { grid-template-columns: 1fr; }
   .catalog-feature-card img { height: 250px; }
   .metrics { grid-template-columns: 1fr; }
   .metrics div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
