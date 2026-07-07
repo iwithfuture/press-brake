@@ -19,32 +19,36 @@ if (productParam) {
 }
 
 document.querySelectorAll('[data-quote-form]').forEach((form) => {
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const data = new FormData(form);
+    const email = String(data.get('email') || '').trim();
+    const whatsapp = String(data.get('whatsapp') || '').trim();
+    const contactFields = form.querySelectorAll('[data-contact-field]');
+    if (contactFields.length && !email && !whatsapp) {
+      contactFields.forEach((field) => field.setAttribute('aria-invalid', 'true'));
+      contactFields[0].focus();
+      return;
+    }
     window.dataLayer = window.dataLayer || [];
+    const isPressBrake = form.dataset.product === 'press-brake' || data.get('product') === 'press-brake';
     window.dataLayer.push({
-      event: 'lead_form_submit',
+      event: isPressBrake ? 'form_submit_press_brake' : 'lead_form_submit',
       form_type: form.dataset.trackForm || 'rfq'
     });
-    const data = new FormData(form);
-    const product = data.get('product') || data.get('target_product') || 'Sheet Metal Machinery';
-    const lines = [
-      `Name: ${data.get('name') || ''}`,
-      `Email: ${data.get('email') || ''}`,
-      `WhatsApp: ${data.get('whatsapp') || ''}`,
-      `Country: ${data.get('country') || ''}`,
-      `Product Interest: ${product}`,
-      `Target Product: ${data.get('target_product') || ''}`,
-      `Material: ${data.get('material') || ''}`,
-      `Thickness: ${data.get('thickness') || ''}`,
-      `Sheet Length: ${data.get('sheet_length') || ''}`,
-      `Daily Output: ${data.get('daily_output') || ''}`,
-      '',
-      data.get('message') || ''
-    ];
-    const subject = encodeURIComponent(`Inquiry for ${product}`);
-    const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:liukaihua@wotian-nc.com?subject=${subject}&body=${body}`;
+    try {
+      await fetch('/api/press-brake-inquiry', {
+        method: 'POST',
+        body: data,
+        keepalive: false
+      });
+    } catch (error) {
+      console.warn('Inquiry endpoint unavailable; continuing to thank-you page.');
+    }
+    const params = new URLSearchParams();
+    params.set('product', isPressBrake ? 'press-brake' : String(data.get('product') || 'sheet-metal-machinery'));
+    if (data.get('machine_type')) params.set('machine_type', String(data.get('machine_type')));
+    window.location.href = `/thank-you?${params.toString()}`;
   });
 });
 
@@ -52,9 +56,21 @@ document.querySelectorAll('[data-track]').forEach((element) => {
   element.addEventListener('click', () => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'cta_click',
+      event: element.dataset.track || 'cta_click',
       cta_name: element.dataset.track,
       cta_text: element.textContent.trim()
     });
   });
 });
+
+if (window.location.pathname.includes('thank-you')) {
+  const thankYouParams = new URLSearchParams(window.location.search);
+  if (thankYouParams.get('product') === 'press-brake') {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'thank_you_press_brake',
+      product: 'press-brake',
+      machine_type: thankYouParams.get('machine_type') || ''
+    });
+  }
+}

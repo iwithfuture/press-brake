@@ -515,6 +515,163 @@ p { color: var(--muted); }
   border-top: 4px solid var(--red);
   box-shadow: 0 14px 30px rgba(18,58,92,.08);
 }
+.press-campaign-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 20px 46px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .88fr);
+  gap: 42px;
+  align-items: center;
+}
+.press-campaign-hero h1 {
+  max-width: 760px;
+  margin: 10px 0 18px;
+  font-size: clamp(38px, 4.2vw, 58px);
+  line-height: 1.07;
+}
+.press-campaign-hero p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.62;
+}
+.press-hero-panel {
+  display: grid;
+  gap: 14px;
+}
+.press-hero-panel img,
+.press-product-hero > img {
+  width: 100%;
+  max-height: 410px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: var(--steel);
+  padding: 14px;
+}
+.mini-proof {
+  border-left: 4px solid var(--red);
+  background: var(--steel);
+  padding: 16px 18px;
+}
+.mini-proof strong,
+.mini-proof span {
+  display: block;
+}
+.mini-proof strong {
+  color: var(--blue);
+  font-size: 16px;
+}
+.mini-proof span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.press-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.press-type-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  background: #fff;
+}
+.press-type-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: contain;
+  padding: 14px;
+  background: var(--steel);
+  border-right: 1px solid var(--line);
+}
+.press-type-card > div {
+  padding: 20px;
+}
+.press-type-card h3 {
+  margin: 8px 0 12px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+.press-type-card dl {
+  margin: 0 0 14px;
+}
+.press-type-card dt {
+  margin-top: 11px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.press-type-card dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.press-guide-grid {
+  display: grid;
+  grid-template-columns: .78fr 1.22fr;
+  gap: 36px;
+  align-items: start;
+}
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 22px;
+  margin-top: 0;
+  border: 1px solid var(--line);
+  padding: 22px 24px;
+  background: var(--steel);
+}
+.press-quote-section {
+  align-items: start;
+}
+.press-brake-form {
+  border-top: 4px solid var(--red);
+  box-shadow: 0 14px 30px rgba(18,58,92,.08);
+}
+.press-brake-form input[type="file"] {
+  padding: 9px 12px;
+}
+.secondary-contact {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+.secondary-contact a {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--blue);
+  font-weight: 900;
+}
+.thank-you-hero {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 78px 20px 46px;
+  text-align: center;
+}
+.thank-you-hero h1 {
+  margin: 10px 0 16px;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.08;
+}
+.thank-you-hero p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  font-size: 18px;
+}
+.thank-you-hero .hero-actions {
+  justify-content: center;
+}
+.thank-you-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
 .product-hero { padding-bottom: 36px; }
 .product-hero img,.series-hero img { max-height: 480px; object-fit: contain; justify-self: center; }
 .spec-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
@@ -539,7 +696,7 @@ p { color: var(--muted); }
   .menu-button { display: inline-flex; }
   .mobile-nav.open { display: block; border-bottom: 1px solid var(--line); background: #fff; }
   .mobile-nav.open .site-nav { display: grid; padding: 14px 20px; gap: 12px; }
-  .hero,.series-hero,.product-hero,.application-hero,.intro-grid,.two-col,.quote-section,.feature-columns,.split,.cta-band,.workflow-section { grid-template-columns: 1fr; }
+  .hero,.series-hero,.product-hero,.application-hero,.press-campaign-hero,.intro-grid,.two-col,.quote-section,.feature-columns,.split,.cta-band,.workflow-section,.press-guide-grid,.thank-you-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 38px; gap: 32px; }
   .hero-copy { max-width: none; }
   .hero h1 { font-size: clamp(36px, 9vw, 42px); }
@@ -551,9 +708,11 @@ p { color: var(--muted); }
   .metrics { grid-template-columns: repeat(2,1fr); }
   .metrics div:nth-child(3) { border-left: 0; }
   .metrics div:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid { grid-template-columns: 1fr 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid { grid-template-columns: 1fr 1fr; }
   .solution-card,.application-detail { grid-template-columns: 1fr; }
+  .press-type-card { grid-template-columns: 1fr; }
   .solution-card img { height: 220px; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .press-type-card img { height: 220px; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .application-detail-media img { height: 220px; }
   .workflow-steps { grid-template-columns: 1fr; }
   .workflow-steps li { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -566,10 +725,11 @@ p { color: var(--muted); }
   .brand small { display: none; }
   .brand-logo { width: 88px; height: 50px; }
   .series-hero h1,.product-hero h1,.subhero h1 { font-size: 36px; }
-  .hero,.series-hero,.product-hero,.application-hero,.section,.subhero { padding-left: 16px; padding-right: 16px; }
+  .hero,.series-hero,.product-hero,.application-hero,.press-campaign-hero,.section,.subhero { padding-left: 16px; padding-right: 16px; }
   .application-hero h1 { font-size: 34px; }
+  .press-campaign-hero h1 { font-size: 34px; }
   .application-hero img { min-height: 230px; }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid { grid-template-columns: 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: 1fr; }
   .metrics div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .trust-strip { grid-template-columns: 1fr; }

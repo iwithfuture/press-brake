@@ -10,11 +10,13 @@
     "laser-cutting-machine.html",
     "nc-press-brake.html",
     "panel-bending-centers.html",
+    "press-brake-machine.html",
     "press-brakes.html",
     "privacy.html",
     "products.html",
     "shearing-machines.html",
-    "tandem-press-brake.html"
+    "tandem-press-brake.html",
+    "thank-you.html"
   ],
   "assets": [
     "electric-servo-press-brake.webp",
