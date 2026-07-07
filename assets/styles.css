@@ -1154,28 +1154,51 @@ h6 {
   font-weight: 800;
 }
 .factory-timeline {
+  counter-reset: process-step;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   padding: 0;
   margin: 20px 0 0;
   list-style: none;
 }
 .factory-timeline li {
   position: relative;
-  min-height: 180px;
-  padding: 20px 14px 18px;
+  min-height: 190px;
+  padding: 22px 18px 20px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 22px rgba(16,24,32,.06);
 }
 .factory-timeline li:before {
-  content: "";
-  display: block;
-  width: 28px;
-  height: 4px;
-  margin-bottom: 16px;
+  counter-increment: process-step;
+  content: counter(process-step, decimal-leading-zero);
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border-radius: 50%;
   background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+.factory-timeline li:not(:last-child):after {
+  content: "→";
+  position: absolute;
+  top: 28px;
+  right: -13px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--red);
+  font-weight: 800;
+  box-shadow: 0 5px 14px rgba(16,24,32,.10);
 }
 .factory-timeline strong {
   display: block;
@@ -1237,6 +1260,7 @@ h6 {
   .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid,.about-product-grid,.buyer-reasons { grid-template-columns: 1fr 1fr; }
   .about-numbers { grid-template-columns: repeat(2, 1fr); }
   .factory-timeline { grid-template-columns: 1fr 1fr; }
+  .factory-timeline li:nth-child(2n):after { display: none; }
   .catalog-feature-card.crowning-card { grid-template-columns: 1fr; }
   .solution-card,.application-detail { grid-template-columns: 1fr; }
   .press-type-card { grid-template-columns: 1fr; }
@@ -1270,6 +1294,14 @@ h6 {
   .about-focus { padding-left: 16px; padding-right: 16px; }
   .application-hero img { min-height: 230px; }
   .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.controller-list,.about-product-grid,.about-numbers,.capability-list,.factory-timeline,.document-grid,.buyer-reasons { grid-template-columns: 1fr; }
+  .factory-timeline li:not(:last-child):after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    left: 24px;
+    bottom: -21px;
+    display: grid;
+  }
   .catalog-feature-card img { height: 250px; }
   .metrics { grid-template-columns: 1fr; }
   .application-links { grid-template-columns: 1fr; }
