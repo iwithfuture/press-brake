@@ -21,6 +21,11 @@ if (productParam) {
 document.querySelectorAll('[data-quote-form]').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'lead_form_submit',
+      form_type: form.dataset.trackForm || 'rfq'
+    });
     const data = new FormData(form);
     const product = data.get('product') || 'Sheet Metal Machinery';
     const lines = [
@@ -35,5 +40,16 @@ document.querySelectorAll('[data-quote-form]').forEach((form) => {
     const subject = encodeURIComponent(`Inquiry for ${product}`);
     const body = encodeURIComponent(lines.join('\n'));
     window.location.href = `mailto:liukaihua@wotian-nc.com?subject=${subject}&body=${body}`;
+  });
+});
+
+document.querySelectorAll('[data-track]').forEach((element) => {
+  element.addEventListener('click', () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'cta_click',
+      cta_name: element.dataset.track,
+      cta_text: element.textContent.trim()
+    });
   });
 });

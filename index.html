@@ -16,7 +16,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="WOTIAN CNC home">
-      <span class="brand-mark">WT</span>
+      <img class="brand-logo" src="assets/wotian-logo.png" alt="WOTIAN">
       <span><strong>WOTIAN CNC</strong><small>Sheet Metal Machinery Export</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobileNav">Menu</button>
@@ -48,20 +48,44 @@
     <span class="eyebrow">Foshan sheet metal machinery factory</span>
     <h1>CNC Sheet Metal Machines for Bending, Grooving &amp; Cutting</h1>
     <p>WOTIAN supplies press brakes, V grooving machines, hydraulic shears, panel benders, and fiber laser cutting machines for overseas distributors and sheet metal manufacturers.</p>
+    <p class="hero-note">Send material thickness and working length. Get model selection and factory quotation support for your market.</p>
     <div class="hero-actions">
-      <a class="button primary" href="contact.html">Request a Quote</a>
-      <a class="button secondary" href="products.html">View Products</a>
+      <a class="button primary" data-track="hero_quote_click" href="contact.html">Get Factory Price</a>
+      <a class="button secondary" data-track="hero_products_click" href="products.html">View Machine Series</a>
     </div>
     <dl class="metrics">
       <div><dt>21+</dt><dd>Years</dd></div>
-      <div><dt>6,300㎡</dt><dd>Factory</dd></div>
+      <div><dt>6,300m&sup2;</dt><dd>Factory</dd></div>
       <div><dt>20+</dt><dd>Export Markets</dd></div>
       <div><dt>OEM</dt><dd>Support</dd></div>
     </dl>
   </div>
-  <div class="hero-image">
-    <img src="assets/factory-floor.webp" alt="WOTIAN CNC factory floor with press brake machines">
-  </div>
+  
+<form class="quick-quote" data-quote-form data-track-form="quick_rfq">
+  <h2>Get model recommendation</h2>
+  <p>Send material thickness and working length. We will match a practical machine configuration.</p>
+  <label>Product Interest<select name="product"><option>Select product</option><option>DHK Electro-Hydraulic Hybrid Servo CNC Press Brake</option>
+<option>NC Torsion Bar Hydraulic Press Brake</option>
+<option>Electric Servo Press Brake</option>
+<option>Dual-Machine Long-Length Press Brake</option>
+<option>CNC V Grooving Machines</option>
+<option>CNC Hydraulic Shearing Machines</option>
+<option>Panel Bending Centers</option>
+<option>Fiber Laser Cutting Machine</option></select></label>
+  <label>Country<input name="country" autocomplete="country-name" required></label>
+  <label>Email / WhatsApp<input name="email" autocomplete="email" required></label>
+  <label class="full">Requirement<textarea name="message" rows="3" placeholder="Example: 3mm stainless steel, 3200mm bending length, electrical cabinet production"></textarea></label>
+  <input type="hidden" name="name" value="Google Ads Lead">
+  <input type="hidden" name="whatsapp" value="">
+  <button class="button primary" type="submit" data-track="quick_rfq_submit">Ask for Model Selection</button>
+</form>
+</section>
+
+<section class="trust-strip">
+  <div><strong>Founded in 2004</strong><span>Long-term CNC machinery manufacturing experience.</span></div>
+  <div><strong>CE / ISO9001 / TUV</strong><span>Certification references from the company catalog.</span></div>
+  <div><strong>Export packaging</strong><span>Machine protection and shipment preparation for overseas buyers.</span></div>
+  <div><strong>Custom models</strong><span>Tonnage, length, controller, tooling, voltage, and OEM options.</span></div>
 </section>
 <section class="section intro-grid">
   <div>
@@ -69,11 +93,12 @@
     <h2>Built for importers, distributors, and sheet-metal manufacturers.</h2>
     <p>Instead of only listing model numbers, this site organizes WOTIAN equipment by the job buyers need to solve: accurate bending, economical bending, long-workpiece forming, V-grooving, cutting, panel bending, and laser processing.</p>
   </div>
-  <div class="trust-panel">
+  <div class="trust-panel factory-proof">
+    <img loading="lazy" src="assets/factory-floor.webp" alt="WOTIAN CNC factory floor with press brake machines">
     <h3>Factory signals buyers look for</h3>
     <ul class="check-list">
       <li>Own manufacturing facility in Foshan, Guangdong.</li>
-      <li>R&D, production, sales, and export support under one supplier.</li>
+      <li>R&amp;D, production, sales, and export support under one supplier.</li>
       <li>TUV Rheinland, ISO9001, and CE certification referenced in catalog.</li>
       <li>Custom models available for special processing needs.</li>
     </ul>
@@ -145,6 +170,16 @@
   </div>
 </article></div>
 </section>
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Applications</span>
+    <h2>Common sheet-metal products buyers produce</h2>
+  </div>
+  <div class="application-links"><article><h3>Elevator &amp; Decoration Panels</h3><p>V grooving, CNC bending, and laser cutting for stainless decorative panels.</p></article>
+<article><h3>Electrical Cabinets</h3><p>Press brakes and panel benders for repeatable cabinet and enclosure production.</p></article>
+<article><h3>HVAC &amp; Ducting</h3><p>Shearing and bending equipment for ducts, housings, and support parts.</p></article>
+<article><h3>Doors &amp; Metal Furniture</h3><p>Cost-effective bending and cutting machines for sheet-metal fabrication lines.</p></article></div>
+</section>
 <section class="section split">
   <img loading="lazy" src="assets/packed-machines.webp" alt="WOTIAN machines prepared in factory packaging">
   <div>
@@ -166,16 +201,20 @@
     <p>WOTIAN can quote standard models or customized configurations for overseas distributors, manufacturers, and project buyers.</p>
   </div>
   <div class="cta-actions">
-    <a class="button primary" href="contact.html?product=Sheet Metal Machinery">Request a Quote</a>
-    <a class="button secondary" href="contact.html?channel=whatsapp&message=Hello%20WOTIAN,%20I%20am%20interested%20in%20Sheet%20Metal%20Machinery">WhatsApp</a>
-    <a class="button ghost" href="mailto:liukaihua@wotian-nc.com?subject=Inquiry%20for%20Sheet%20Metal%20Machinery">Email</a>
+    <a class="button primary" data-track="quote_click" href="contact.html?product=Sheet Metal Machinery">Get Factory Price</a>
+    <a class="button secondary" data-track="whatsapp_click" href="contact.html?channel=whatsapp&message=Hello%20WOTIAN,%20I%20am%20interested%20in%20Sheet%20Metal%20Machinery">Talk to Sales</a>
+    <a class="button ghost" data-track="email_click" href="mailto:liukaihua@wotian-nc.com?subject=Inquiry%20for%20Sheet%20Metal%20Machinery">Email RFQ</a>
   </div>
 </section>
 
   <section class="faq"><h2>FAQ</h2><details><summary>Can WOTIAN customize machine size or configuration?</summary><p>Yes. The catalog states special model customization is available. Buyers can request tonnage, bending length, control system, tooling, voltage, color, and packaging options.</p></details>
 <details><summary>What information should I send for a quotation?</summary><p>Send material type, thickness, sheet length, target products, daily output, required accuracy, destination country, and any preferred controller or tooling brand.</p></details>
 <details><summary>Can the machines be prepared for export shipment?</summary><p>Yes. The site highlights export packaging, machine protection, documentation support, and shipment coordination for overseas buyers.</p></details>
-<details><summary>Which press brake should I choose?</summary><p>Choose CNC press brakes for higher accuracy and repeatability, NC press brakes for economical general bending, electric servo models for clean compact precision work, and tandem machines for extra-long parts.</p></details></section>
+<details><summary>Which press brake should I choose?</summary><p>Choose CNC press brakes for higher accuracy and repeatability, NC press brakes for economical general bending, electric servo models for clean compact precision work, and tandem machines for extra-long parts.</p></details>
+<details><summary>Can you customize voltage and controller language?</summary><p>Yes. Voltage, controller language, safety configuration, tooling, and machine color can be discussed before production.</p></details>
+<details><summary>Do you support OEM branding?</summary><p>Yes. OEM support is available for distributors and project buyers who need customized appearance, nameplates, or market-specific configuration.</p></details>
+<details><summary>What is the usual quotation response process?</summary><p>Send the material, thickness, working length, product drawing or photo, destination country, and target quantity. WOTIAN can recommend a suitable model and quotation scope.</p></details>
+<details><summary>Do you provide installation support?</summary><p>WOTIAN can support overseas buyers with operation guidance, machine documentation, remote communication, and preparation details before shipment.</p></details></section>
   </main>
   <footer class="site-footer">
     <div>

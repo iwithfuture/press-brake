@@ -16,7 +16,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="WOTIAN CNC home">
-      <span class="brand-mark">WT</span>
+      <img class="brand-logo" src="assets/wotian-logo.png" alt="WOTIAN">
       <span><strong>WOTIAN CNC</strong><small>Sheet Metal Machinery Export</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobileNav">Menu</button>
@@ -57,7 +57,7 @@
     <p><strong>Location:</strong> Foshan, Guangdong, China</p>
   </div>
   
-<form class="quote-form" data-quote-form>
+<form class="quote-form" data-quote-form data-track-form="full_rfq">
   <label>Name<input name="name" autocomplete="name" required></label>
   <label>Email<input name="email" type="email" autocomplete="email" required></label>
   <label>WhatsApp<input name="whatsapp" autocomplete="tel"></label>
@@ -71,7 +71,7 @@
 <option>Panel Bending Centers</option>
 <option>Fiber Laser Cutting Machine</option></select></label>
   <label>Message<textarea name="message" rows="5" placeholder="Material, thickness, working length, quantity, destination port..."></textarea></label>
-  <button class="button primary" type="submit">Send Inquiry by Email</button>
+  <button class="button primary" type="submit" data-track="full_rfq_submit">Send Inquiry by Email</button>
   <p class="form-note">This static form opens your email client with the inquiry details. You can also use WhatsApp for a faster reply.</p>
 </form>
 </section>
