@@ -875,6 +875,13 @@ p { color: var(--muted); }
 .press-type-card img {
   border: 0;
 }
+.product-media img,
+.solution-card img,
+.press-type-card img,
+.application-detail-media img {
+  object-fit: cover;
+  padding: 0;
+}
 .solution-card img,
 .press-type-card img,
 .application-detail-media,
@@ -892,6 +899,17 @@ p { color: var(--muted); }
 }
 .application-detail:last-child {
   border-bottom: 0;
+}
+.solution-card,
+.press-type-card {
+  grid-template-columns: 1fr;
+}
+.solution-card img,
+.press-type-card img {
+  width: 100%;
+  height: 220px;
+  min-height: 0;
+  object-fit: cover;
 }
 .related-machines {
   border-top: 0;
