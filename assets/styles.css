@@ -1142,42 +1142,7 @@ h6 {
   padding-left: max(20px,calc((100vw - var(--max))/2));
   padding-right: max(20px,calc((100vw - var(--max))/2));
   background: #F7F8FA;
-  align-items: start;
-}
-.capability-media {
-  display: grid;
-  gap: 16px;
-  position: sticky;
-  top: 104px;
-}
-.capability-media img {
-  width: 100%;
-  min-height: 360px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 10px 26px rgba(16,24,32,.07);
-  background: #edf2f6;
-}
-.capability-note {
-  padding: 18px 20px;
-  border-left: 4px solid var(--red);
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(16,24,32,.05);
-}
-.capability-note strong,
-.capability-note span {
   display: block;
-}
-.capability-note strong {
-  color: var(--blue);
-  font-size: 18px;
-  line-height: 1.35;
-}
-.capability-note span {
-  margin-top: 6px;
-  color: #425466;
-  line-height: 1.6;
 }
 .capability-content > p {
   max-width: 760px;
@@ -1185,7 +1150,7 @@ h6 {
 }
 .capability-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   padding: 0;
   margin: 22px 0 0;
@@ -1334,6 +1299,7 @@ h6 {
   .metrics { grid-template-columns: repeat(2,1fr); }
   .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid,.about-product-grid,.buyer-reasons { grid-template-columns: 1fr 1fr; }
   .about-numbers { grid-template-columns: repeat(2, 1fr); }
+  .capability-list { grid-template-columns: 1fr 1fr; }
   .factory-timeline { grid-template-columns: 1fr 1fr; }
   .factory-timeline li:nth-child(2n):after { display: none; }
   .catalog-feature-card.crowning-card { grid-template-columns: 1fr; }
@@ -1368,7 +1334,6 @@ h6 {
   .about-hero { padding-left: 16px; padding-right: 16px; }
   .about-focus { padding-left: 16px; padding-right: 16px; }
   .about-capability { padding-left: 16px; padding-right: 16px; }
-  .capability-media { position: static; }
   .application-hero img { min-height: 230px; }
   .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.controller-list,.about-product-grid,.about-numbers,.capability-list,.factory-timeline,.document-grid,.buyer-reasons { grid-template-columns: 1fr; }
   .factory-timeline li:not(:last-child):after {
