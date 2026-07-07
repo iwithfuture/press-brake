@@ -152,7 +152,7 @@ p { color: var(--muted); }
   border-bottom: 1px solid var(--line);
 }
 .trust-strip div {
-  padding: 18px 18px 18px 0;
+  padding: 20px 18px 20px 0;
 }
 .trust-strip div + div {
   border-left: 1px solid var(--line);
@@ -161,14 +161,24 @@ p { color: var(--muted); }
 .trust-strip strong {
   display: block;
   color: var(--blue);
-  font-size: 15px;
+  font-size: clamp(25px, 2.6vw, 38px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
 }
 .trust-strip span {
   display: block;
-  margin-top: 6px;
+  margin-top: 9px;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
+}
+.trust-strip strong span {
+  display: inline;
+  margin-top: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 .series-hero,.product-hero {
   max-width: var(--max);

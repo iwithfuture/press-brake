@@ -18,6 +18,46 @@ if (productParam) {
   });
 }
 
+const animateCounter = (element) => {
+  const target = Number(element.dataset.target || 0);
+  const suffix = element.dataset.suffix || '';
+  const duration = 1000;
+  const start = performance.now();
+  const format = (value) => element.dataset.format === 'plain'
+    ? String(Math.round(value))
+    : Math.round(value).toLocaleString('en-US');
+  const step = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    element.textContent = `${format(target * eased)}${suffix}`;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+
+const counterStrip = document.querySelector('[data-counter-strip]');
+if (counterStrip) {
+  const counters = counterStrip.querySelectorAll('[data-counter]');
+  const startCounters = () => {
+    counters.forEach((counter) => {
+      if (counter.dataset.counted) return;
+      counter.dataset.counted = 'true';
+      animateCounter(counter);
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        startCounters();
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    observer.observe(counterStrip);
+  } else {
+    startCounters();
+  }
+}
+
 document.querySelectorAll('[data-quote-form]').forEach((form) => {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
