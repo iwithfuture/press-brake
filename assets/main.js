@@ -18,6 +18,34 @@ if (productParam) {
   });
 }
 
+const counterItems = document.querySelectorAll('[data-counter]');
+const formatCounterValue = (value) => new Intl.NumberFormat('en-US').format(value);
+const runCounter = (element) => {
+  const target = Number(element.dataset.count || '0');
+  const suffix = element.dataset.suffix || '';
+  const duration = 900;
+  const startTime = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    element.innerHTML = `${formatCounterValue(Math.round(target * eased))}${suffix}`;
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+
+if (counterItems.length) {
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        runCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.35 });
+  counterItems.forEach((item) => counterObserver.observe(item));
+}
+
 document.querySelectorAll('[data-quote-form]').forEach((form) => {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
