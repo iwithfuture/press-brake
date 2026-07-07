@@ -27,13 +27,18 @@ document.querySelectorAll('[data-quote-form]').forEach((form) => {
       form_type: form.dataset.trackForm || 'rfq'
     });
     const data = new FormData(form);
-    const product = data.get('product') || 'Sheet Metal Machinery';
+    const product = data.get('product') || data.get('target_product') || 'Sheet Metal Machinery';
     const lines = [
       `Name: ${data.get('name') || ''}`,
       `Email: ${data.get('email') || ''}`,
       `WhatsApp: ${data.get('whatsapp') || ''}`,
       `Country: ${data.get('country') || ''}`,
       `Product Interest: ${product}`,
+      `Target Product: ${data.get('target_product') || ''}`,
+      `Material: ${data.get('material') || ''}`,
+      `Thickness: ${data.get('thickness') || ''}`,
+      `Sheet Length: ${data.get('sheet_length') || ''}`,
+      `Daily Output: ${data.get('daily_output') || ''}`,
       '',
       data.get('message') || ''
     ];
