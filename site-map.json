@@ -19,6 +19,7 @@
     "thank-you.html"
   ],
   "assets": [
+    "cnc-crowning-system.webp",
     "electric-servo-press-brake.webp",
     "factory-exterior.webp",
     "factory-floor.webp",
@@ -29,6 +30,7 @@
     "main.js",
     "packed-machines.webp",
     "panel-bending-center.webp",
+    "press-brake-control-systems.webp",
     "styles.css",
     "tandem-press-brake.webp",
     "vertical-v-grooving.webp",
