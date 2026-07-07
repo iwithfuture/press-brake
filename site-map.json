@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "about.html",
+    "applications.html",
+    "cnc-press-brake.html",
+    "contact.html",
+    "electric-servo-press-brake.html",
+    "grooving-machines.html",
+    "index.html",
+    "laser-cutting-machine.html",
+    "nc-press-brake.html",
+    "panel-bending-centers.html",
+    "press-brakes.html",
+    "privacy.html",
+    "products.html",
+    "shearing-machines.html",
+    "tandem-press-brake.html"
+  ],
+  "assets": [
+    "electric-servo-press-brake.webp",
+    "factory-exterior.webp",
+    "factory-floor.webp",
+    "guillotine-shearing-machine.webp",
+    "horizontal-v-grooving.webp",
+    "laser-cutting-machine.webp",
+    "laser-showroom.webp",
+    "main.js",
+    "packed-machines.webp",
+    "panel-bending-center.webp",
+    "styles.css",
+    "tandem-press-brake.webp",
+    "vertical-v-grooving.webp",
+    "wc67k-press-brake.webp",
+    "we67k-press-brake.webp"
+  ]
+}
