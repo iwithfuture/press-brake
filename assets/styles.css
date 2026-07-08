@@ -694,18 +694,25 @@ h6 {
 }
 .comparison-grid li {
   position: relative;
-  margin: 9px 0;
-  padding-left: 20px;
+  margin: 10px 0;
+  padding-left: 30px;
   color: #16202A;
+  line-height: 1.62;
 }
 .comparison-grid li:before {
-  content: "";
+  content: "✓";
   position: absolute;
   left: 0;
-  top: .72em;
-  width: 8px;
-  height: 8px;
-  background: var(--red);
+  top: .08em;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff1f2;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
 }
 .comparison-note {
   display: flex;
