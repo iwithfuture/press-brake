@@ -1389,6 +1389,12 @@ main > .section:nth-of-type(even) {
   border-radius: 8px;
   box-shadow: 0 16px 34px rgba(16,24,32,.14);
 }
+.cta-band h2 {
+  color: #fff;
+}
+.cta-band p {
+  color: #d5dee7;
+}
 .workflow-steps li {
   min-height: 170px;
   padding: 22px 18px;
