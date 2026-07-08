@@ -1320,6 +1320,72 @@ main > .section:nth-of-type(even) {
   padding: 10px;
   mix-blend-mode: normal;
 }
+.product-grid,
+.solution-grid,
+.application-grid,
+.application-links,
+.about-product-grid {
+  align-items: stretch;
+}
+.product-card {
+  display: grid;
+  grid-template-rows: 210px 1fr;
+}
+.product-card > div {
+  min-height: 100%;
+  padding: 22px 20px 24px;
+}
+.product-card .tag {
+  display: block;
+  min-height: 18px;
+  margin-bottom: 10px;
+}
+.product-card h3 {
+  min-height: 3.9em;
+  margin: 0 0 12px;
+}
+.product-card p {
+  min-height: 5.1em;
+  margin: 0 0 18px;
+}
+.product-card .text-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 24px;
+}
+.product-grid.wide .product-card h3 {
+  min-height: 2.6em;
+}
+.product-grid.wide .product-card p {
+  min-height: 3.4em;
+}
+.solution-card > div {
+  min-height: 100%;
+}
+.solution-card h3 {
+  min-height: 2.6em;
+}
+.solution-card dl {
+  flex: 1;
+}
+.solution-card .button {
+  width: fit-content;
+}
+.application-links h3,
+.application-grid h3 {
+  min-height: 2.5em;
+}
+.application-links p,
+.application-grid p {
+  flex: 1;
+}
+.about-product-grid a {
+  grid-template-rows: 150px minmax(46px, auto) 1fr;
+}
+.about-product-grid strong {
+  min-height: 2.7em;
+}
 .application-links article,
 .application-grid article,
 .mini-proof {
@@ -1811,5 +1877,6 @@ main > .section:nth-of-type(even) {
   .site-footer { grid-template-columns: 1fr; gap: 26px; }
   .footer-bottom { display: grid; gap: 6px; }
   .button { width: 100%; }
+  .product-card { grid-template-rows: 190px 1fr; }
   .product-media { height: 190px; }
 }
