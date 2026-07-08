@@ -659,6 +659,71 @@ h6 {
   color: var(--muted);
   font-size: 16px;
 }
+.press-comparison {
+  padding-top: 38px;
+}
+.press-comparison > p {
+  max-width: 760px;
+  margin-top: -8px;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 22px;
+}
+.comparison-grid article {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e9ee;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(16,24,32,.05);
+}
+.comparison-grid h3 {
+  margin: 8px 0 10px;
+  color: var(--blue);
+}
+.comparison-grid p {
+  margin: 0 0 14px;
+  color: #425466;
+}
+.comparison-grid ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.comparison-grid li {
+  position: relative;
+  margin: 9px 0;
+  padding-left: 20px;
+  color: #16202A;
+}
+.comparison-grid li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .72em;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+}
+.comparison-note {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 14px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  background: #F7F8FA;
+}
+.comparison-note strong {
+  color: var(--blue);
+  white-space: nowrap;
+}
+.comparison-note span {
+  color: #425466;
+}
 .press-guide-grid {
   display: grid;
   grid-template-columns: .78fr 1.22fr;
@@ -1297,7 +1362,7 @@ h6 {
   .hero-image img { min-height: 260px; }
   .application-links { grid-template-columns: 1fr 1fr; }
   .metrics { grid-template-columns: repeat(2,1fr); }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid,.about-product-grid,.buyer-reasons { grid-template-columns: 1fr 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.press-type-grid,.about-product-grid,.buyer-reasons,.comparison-grid { grid-template-columns: 1fr 1fr; }
   .about-numbers { grid-template-columns: repeat(2, 1fr); }
   .capability-list { grid-template-columns: 1fr 1fr; }
   .factory-timeline { grid-template-columns: 1fr 1fr; }
@@ -1335,7 +1400,8 @@ h6 {
   .about-focus { padding-left: 16px; padding-right: 16px; }
   .about-capability { padding-left: 16px; padding-right: 16px; }
   .application-hero img { min-height: 230px; }
-  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.controller-list,.about-product-grid,.about-numbers,.capability-list,.factory-timeline,.document-grid,.buyer-reasons { grid-template-columns: 1fr; }
+  .product-grid,.product-grid.wide,.application-grid,.solution-grid,.detail-grid,.press-type-grid,.guide-list,.controller-list,.about-product-grid,.about-numbers,.capability-list,.factory-timeline,.document-grid,.buyer-reasons,.comparison-grid { grid-template-columns: 1fr; }
+  .comparison-note { display: grid; gap: 6px; }
   .factory-timeline li:not(:last-child):after {
     content: "↓";
     top: auto;
