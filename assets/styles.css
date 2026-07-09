@@ -1255,6 +1255,15 @@ main > .section:nth-of-type(even) {
   background: #fff;
   box-shadow: none;
 }
+.press-hero-panel img,
+.press-type-card img,
+.catalog-feature-card img {
+  background: #fff;
+}
+.press-hero-panel img {
+  border-color: rgba(18,58,92,.08);
+  box-shadow: none;
+}
 .product-card,
 .solution-card,
 .application-links article,
