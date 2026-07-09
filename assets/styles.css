@@ -1248,6 +1248,13 @@ main > .section:nth-of-type(even) {
 .catalog-feature-card img {
   object-fit: contain;
 }
+.series-hero img,
+.product-hero img,
+.press-product-hero > img,
+.product-hero-panel > img {
+  background: #fff;
+  box-shadow: none;
+}
 .product-card,
 .solution-card,
 .application-links article,
