@@ -196,19 +196,19 @@
   </div>
   
 <form class="quote-form press-brake-form" action="/thank-you" method="get" enctype="multipart/form-data" data-quote-form data-track-form="press_brake_rfq" data-product="press-brake">
-  <label>Name<input name="name" autocomplete="name"></label>
-  <label>Email<input name="email" type="email" autocomplete="email" data-contact-field></label>
-  <label>WhatsApp<input name="whatsapp" autocomplete="tel" data-contact-field></label>
-  <label>Country<input name="country" autocomplete="country-name" required></label>
+  <label>Name <span class="required-mark">*</span><input name="name" autocomplete="name" required></label>
+  <label>Email <span class="required-mark">*</span><input name="email" type="email" autocomplete="email" data-contact-field></label>
+  <label>WhatsApp <span class="required-mark">*</span><input name="whatsapp" autocomplete="tel" data-contact-field></label>
+  <label>Country<input name="country" autocomplete="country-name"></label>
   <label>Machine Type Interested<select name="machine_type"><option>Tandem Press Brake</option><option>CNC Press Brake / WE67K Series</option><option>NC Hydraulic Press Brake / WC67K Series</option><option>Electric Servo Press Brake</option><option>Tandem Press Brake</option><option>Not sure, need recommendation</option></select></label>
   <label>Material Type<input name="material_type" placeholder="Carbon steel, stainless steel, aluminum..."></label>
-  <label>Maximum Thickness<input name="max_thickness" placeholder="Example: 3 mm" required></label>
-  <label>Maximum Bending Length<input name="max_bending_length" placeholder="Example: 3200 mm" required></label>
+  <label>Maximum Thickness<input name="max_thickness" placeholder="Example: 3 mm"></label>
+  <label>Maximum Bending Length<input name="max_bending_length" placeholder="Example: 3200 mm"></label>
   <label>Target Product<input name="target_product" placeholder="Cabinet, ducting, door, panel..."></label>
   <label>Daily Output<input name="daily_output" placeholder="Example: 200 pcs/day"></label>
   <label>Voltage Requirement<input name="voltage" placeholder="Example: 380V 50Hz 3 phase"></label>
   <label>Upload Drawing or Photo<input name="drawing" type="file" accept="image/*,.pdf,.dwg,.dxf"></label>
-  <label>Message<textarea name="message" rows="5" placeholder="Material, thickness, bending length, target product, quantity, destination port..." required></textarea></label>
+  <label>Message <span class="required-mark">*</span><textarea name="message" rows="5" placeholder="Material, thickness, bending length, target product, quantity, destination port..." required></textarea></label>
   <input type="hidden" name="product" value="press-brake">
   <button class="button primary" type="submit" data-track="press_brake_form_submit">Get Press Brake Quote</button>
   <p class="form-note">Submit the inquiry to continue to the thank-you page for conversion tracking. WhatsApp and email remain available as secondary contact options.</p>

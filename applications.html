@@ -284,15 +284,15 @@
     <img loading="lazy" src="assets/packed-machines.webp" alt="WOTIAN machines prepared for export packing">
   </div>
   <form class="quote-form application-form" data-quote-form data-track-form="application_rfq">
-    <label>Name<input name="name" autocomplete="name" required></label>
-    <label>Email or WhatsApp<input name="email" autocomplete="email" required></label>
-    <label>Country<input name="country" autocomplete="country-name" required></label>
-    <label>Target Product<input name="target_product" placeholder="Cabinet, facade panel, ducting..." required></label>
+    <label>Name <span class="required-mark">*</span><input name="name" autocomplete="name" required></label>
+    <label>Email or WhatsApp <span class="required-mark">*</span><input name="email" autocomplete="email" required></label>
+    <label>Country<input name="country" autocomplete="country-name"></label>
+    <label>Target Product<input name="target_product" placeholder="Cabinet, facade panel, ducting..."></label>
     <label>Material<input name="material" placeholder="Stainless steel, carbon steel, aluminum..."></label>
     <label>Thickness<input name="thickness" placeholder="Example: 1.5 mm"></label>
     <label>Sheet Length<input name="sheet_length" placeholder="Example: 3200 mm"></label>
     <label>Daily Output<input name="daily_output" placeholder="Example: 200 panels/day"></label>
-    <label>Message<textarea name="message" rows="5" placeholder="Drawing details, required accuracy, budget range, destination port..."></textarea></label>
+    <label>Message <span class="required-mark">*</span><textarea name="message" rows="5" placeholder="Drawing details, required accuracy, budget range, destination port..." required></textarea></label>
     <input type="hidden" name="product" value="Application-Based Sheet Metal Machinery Solution">
     <button class="button primary" type="submit" data-track="application_rfq_submit">Get Machine Recommendation</button>
     <p class="form-note">This static form opens your email client with the inquiry details.</p>

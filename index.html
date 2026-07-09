@@ -67,6 +67,7 @@
 <form class="quick-quote" data-quote-form data-track-form="quick_rfq">
   <h2>Get model recommendation</h2>
   <p>Send material thickness and working length. We will match a practical machine configuration.</p>
+  <label>Name <span class="required-mark">*</span><input name="name" autocomplete="name" required></label>
   <label>Product Interest<select name="product"><option>Select product</option><option>WE67K Electro-Hydraulic Servo CNC Press Brake</option>
 <option>NC Torsion Bar Hydraulic Press Brake</option>
 <option>Electric Servo Press Brake</option>
@@ -75,10 +76,9 @@
 <option>CNC Hydraulic Shearing Machines</option>
 <option>Panel Bending Centers</option>
 <option>Fiber Laser Cutting Machine</option></select></label>
-  <label>Country<input name="country" autocomplete="country-name" required></label>
-  <label>Email / WhatsApp<input name="email" autocomplete="email" required></label>
-  <label class="full">Requirement<textarea name="message" rows="3" placeholder="Example: 3mm stainless steel, 3200mm bending length, electrical cabinet production"></textarea></label>
-  <input type="hidden" name="name" value="Google Ads Lead">
+  <label>Country<input name="country" autocomplete="country-name"></label>
+  <label>Email / WhatsApp <span class="required-mark">*</span><input name="email" autocomplete="email" required></label>
+  <label class="full">Message <span class="required-mark">*</span><textarea name="message" rows="3" placeholder="Example: 3mm stainless steel, 3200mm bending length, electrical cabinet production" required></textarea></label>
   <input type="hidden" name="whatsapp" value="">
   <button class="button primary" type="submit" data-track="quick_rfq_submit">Ask for Model Selection</button>
 </form>
