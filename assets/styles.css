@@ -1314,7 +1314,7 @@ main > .section:nth-of-type(even) {
   margin-top: auto;
 }
 .product-media {
-  background: linear-gradient(180deg, #f3f6f9, #eaf0f5);
+  background: #fff;
 }
 .product-media img {
   padding: 10px;
@@ -1350,7 +1350,8 @@ main > .section:nth-of-type(even) {
   height: auto;
   min-height: 260px;
   border-bottom: 0;
-  border-right: 1px solid rgba(18,58,92,.08);
+  border-right: 1px solid rgba(18,58,92,.06);
+  background: #fff;
 }
 .product-grid.wide .product-media {
   min-height: 250px;
