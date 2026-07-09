@@ -1402,6 +1402,14 @@ main > .section:nth-of-type(even) {
 .solution-card > div {
   min-height: 100%;
 }
+.application-overview .solution-card img,
+.solution-card img {
+  height: 300px;
+  min-height: 300px;
+  object-fit: contain;
+  padding: 16px;
+  background: #fff;
+}
 .solution-card h3 {
   min-height: 2.6em;
 }
@@ -1880,7 +1888,7 @@ main > .section:nth-of-type(even) {
   .catalog-feature-card.crowning-card { grid-template-columns: 1fr; }
   .solution-card,.application-detail { grid-template-columns: 1fr; }
   .press-type-card { grid-template-columns: 1fr; }
-  .solution-card img { height: 220px; min-height: 0; border-right: 0; border-bottom: 0; }
+  .solution-card img { height: 260px; min-height: 260px; border-right: 0; border-bottom: 0; }
   .press-type-card img { height: 220px; min-height: 0; border-right: 0; border-bottom: 0; }
   .application-detail-media img { height: 220px; }
   .workflow-steps { grid-template-columns: 1fr; }
@@ -1939,5 +1947,9 @@ main > .section:nth-of-type(even) {
   .product-grid.wide .product-media {
     min-height: 190px;
     border-right: 0;
+  }
+  .solution-card img {
+    height: 240px;
+    min-height: 240px;
   }
 }
